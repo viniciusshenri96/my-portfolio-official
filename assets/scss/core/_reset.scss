@@ -1,0 +1,72 @@
+@use "../abstracts/functions" as *;
+
+// VARIABLES CSS
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* better for people who browse with the keyboard and know where they are on the site, so I set a different style, making it more visible, taking it from the default.
+ */
+*:focus,
+*:focus-visible {
+  outline: #646464 dotted 4px;
+  outline-offset: 4px;
+}
+
+ul {
+  list-style: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+select {
+  border: none;
+  background: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    background-attachment: initial !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+    -webkit-animation-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    -webkit-animation-delay: -1ms !important;
+    animation-delay: -1ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// html,
+// body {
+//   height: 100%;
+// }
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  line-height: 1.5;
+  /* improves text rendering */
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #111827;
+}

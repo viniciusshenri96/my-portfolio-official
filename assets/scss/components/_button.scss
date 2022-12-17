@@ -1,0 +1,33 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  border: 1px solid #4338ca;
+  box-shadow: 0px 2px 6px rgba(55, 48, 163, 0.25);
+  border-radius: 4px;
+  padding: rem(12) rem(24);
+  color: #f9fafb;
+}
+
+.btn--fill:link,
+.btn--fill:visited {
+  background: #312e81;
+  text-transform: uppercase;
+  transition: 0.4s ease-in-out;
+
+  &:hover,
+  &:active {
+    background: #4f46e5;
+  }
+}
+
+.btn--transparent:link,
+.btn--transparent:visited {
+  transition: 0.4s ease-in-out;
+  &:hover,
+  &:active {
+    background: #4338ca;
+  }
+}

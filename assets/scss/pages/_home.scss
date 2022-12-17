@@ -1,0 +1,53 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  @include container;
+  padding-top: rem(36);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem(120);
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: rem(40);
+
+    .header__list {
+      display: flex;
+      gap: rem(24);
+
+      .header__link:link,
+      .header__link:visited {
+        color: #f9fafb;
+      }
+    }
+  }
+}
+
+.hero {
+  @include container;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+
+  &__content {
+    display: grid;
+    justify-items: start;
+    align-content: start;
+    gap: rem(48);
+
+    .hero__title {
+      font: 700 rem(74) / 1.12 "Comfortaa", cursive;
+      color: #f5f5f5;
+
+      .hero__details {
+        color: #4338ca;
+      }
+    }
+    .btn__box {
+      display: flex;
+      gap: rem(20);
+    }
+  }
+}

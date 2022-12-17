@@ -5,20 +5,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
   <title>Vinícius - Desenvolvedor Front-End</title>
-  <style>
-    body {
-      background: #111827;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
   <header class="header">
     <a href="#">
-      <img src="./assets/img/logo-vinicius.svg" alt="">
+      <img src="./assets/img/logo-vinicius.png" alt="logo written Vinicius">
     </a>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li class="header__item">
+          <a class="header__link" href="#sobre">Sobre</a>
+        </li>
+        <li>
+          <a class="header__link" href="#skills">Habilidades</a>
+        </li>
+        <li>
+          <a class="header__link" href="#projetos">Projetos</a>
+        </li>
+        <li>
+          <a class="header__link" href="#contato">Contato</a>
+        </li>
+      </ul>
+      <a class="btn btn--fill" href="https://github.com/viniciusshenri96">GitHub</a>
+    </nav>
   </header>
+
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">
+        Olá, sou Vinícius, Desenvolvedor <span class="hero__details">FRONT-END</span>
+      </h1>
+      <div class="btn__box">
+        <a class="btn btn--transparent" href="">Linkedin</a>
+        <a class="btn btn--fill" href="">Projetos</a>
+      </div>
+    </div>
+    <img src="./assets/img/hero-img.svg" alt="">
+  </section>
 </body>
 
 </html>

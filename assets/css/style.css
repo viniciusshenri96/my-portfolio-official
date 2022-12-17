@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* better for people who browse with the keyboard and know where they are on the site, so I set a different style, making it more visible, taking it from the default.
+ */
+*:focus,
+*:focus-visible {
+  outline: #646464 dotted 4px;
+  outline-offset: 4px;
+}
+
+ul {
+  list-style: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+select {
+  border: none;
+  background: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    background-attachment: initial !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+    -webkit-animation-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    -webkit-animation-delay: -1ms !important;
+    animation-delay: -1ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  line-height: 1.5;
+  /* improves text rendering */
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #111827;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  border: 1px solid #4338ca;
+  box-shadow: 0px 2px 6px rgba(55, 48, 163, 0.25);
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  color: #f9fafb;
+}
+
+.btn--fill:link,
+.btn--fill:visited {
+  background: #312e81;
+  text-transform: uppercase;
+  transition: 0.4s ease-in-out;
+}
+.btn--fill:link:hover, .btn--fill:link:active,
+.btn--fill:visited:hover,
+.btn--fill:visited:active {
+  background: #4f46e5;
+}
+
+.btn--transparent:link,
+.btn--transparent:visited {
+  transition: 0.4s ease-in-out;
+}
+.btn--transparent:link:hover, .btn--transparent:link:active,
+.btn--transparent:visited:hover,
+.btn--transparent:visited:active {
+  background: #4338ca;
+}
+
+.header {
+  max-width: 77.5rem;
+  padding: 0 2.5rem;
+  margin: 0 auto;
+  padding-top: 2.25rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7.5rem;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.header__nav .header__list {
+  display: flex;
+  gap: 1.5rem;
+}
+.header__nav .header__list .header__link:link,
+.header__nav .header__list .header__link:visited {
+  color: #f9fafb;
+}
+
+.hero {
+  max-width: 77.5rem;
+  padding: 0 2.5rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+.hero__content {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  gap: 3rem;
+}
+.hero__content .hero__title {
+  font: 700 4.1294642857rem "Comfortaa", cursive;
+  color: #f5f5f5;
+}
+.hero__content .hero__title .hero__details {
+  color: #4338ca;
+}
+.hero__content .btn__box {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/*# sourceMappingURL=style.css.map */
