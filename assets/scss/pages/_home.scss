@@ -252,4 +252,66 @@
 .skills {
   @include container;
   display: grid;
+  margin-bottom: rem(160);
+
+  &__techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(40);
+
+    .skills__list {
+      width: rem(260);
+      padding: rem(72) rem(20);
+      background-color: #1f2937;
+      border-radius: rem(8);
+      text-align: center;
+      position: relative;
+      margin-bottom: rem(32);
+
+      .circle {
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        background: #302f86;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        cursor: pointer;
+      }
+
+      .skills__items {
+        .skills__icon {
+          margin: 0 auto;
+          margin-bottom: rem(24);
+        }
+        .skills__title {
+          font: 700 rem(14) / #{1.43} "Comfortaa", cursive;
+          text-transform: uppercase;
+          color: #d1d5db;
+          margin-bottom: rem(12);
+        }
+        .skills__desc {
+          font: 700 rem(16) / #{1.5} "Comfortaa", cursive;
+          color: #f3f4f6;
+        }
+      }
+    }
+  }
+}
+
+.projects {
+  @include container;
+  display: grid;
+  margin-bottom: rem(160);
+
+  .projects__display {
+    max-width: rem(600);
+    height: rem(440);
+    border-radius: rem(30) rem(30) 0 0;
+    background-color: #1f2937;
+  }
 }

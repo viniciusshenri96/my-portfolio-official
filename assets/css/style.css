@@ -330,6 +330,63 @@ body {
   padding: 0 2.5rem;
   margin: 0 auto;
   display: grid;
+  margin-bottom: 10rem;
+}
+.skills__techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+.skills__techs .skills__list {
+  width: 16.25rem;
+  padding: 4.5rem 1.25rem;
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.skills__techs .skills__list .circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: #302f86;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  cursor: pointer;
+}
+.skills__techs .skills__list .skills__items .skills__icon {
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+.skills__techs .skills__list .skills__items .skills__title {
+  font: 700 0.875rem/1.43 "Comfortaa", cursive;
+  text-transform: uppercase;
+  color: #d1d5db;
+  margin-bottom: 0.75rem;
+}
+.skills__techs .skills__list .skills__items .skills__desc {
+  font: 700 1rem/1.5 "Comfortaa", cursive;
+  color: #f3f4f6;
+}
+
+.projects {
+  max-width: 77.5rem;
+  padding: 0 2.5rem;
+  margin: 0 auto;
+  display: grid;
+  margin-bottom: 10rem;
+}
+.projects .projects__display {
+  max-width: 37.5rem;
+  height: 27.5rem;
+  border-radius: 1.875rem 1.875rem 0 0;
+  background-color: #1f2937;
 }
 
 /*# sourceMappingURL=style.css.map */
