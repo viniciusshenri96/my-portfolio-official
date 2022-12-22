@@ -123,6 +123,7 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
+  margin-bottom: 10rem;
 }
 .hero__content {
   display: grid;
@@ -140,6 +141,195 @@ body {
 .hero__content .btn__box {
   display: flex;
   gap: 1.25rem;
+}
+
+.about {
+  max-width: 77.5rem;
+  padding: 0 2.5rem;
+  margin: 0 auto;
+  display: grid;
+  margin-bottom: 10rem;
+}
+.about__title {
+  font: 700 4rem/1.12 "Comfortaa", cursive;
+  color: #f5f5f5;
+  justify-self: center;
+  margin-bottom: 5rem;
+  position: relative;
+}
+.about__title::before {
+  content: "";
+  display: inline-block;
+  width: 62px;
+  height: 62px;
+  border-radius: 100%;
+  border: 2px solid #4338ca;
+  box-shadow: 0px 0px 10px rgba(165, 180, 252, 0.25);
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  z-index: -1;
+}
+.about__title::after {
+  content: "";
+  display: inline-block;
+  width: 62px;
+  height: 62px;
+  border-radius: 100%;
+  background: #6c63ff;
+  opacity: 0.5;
+  position: absolute;
+  top: 4px;
+  left: -4px;
+  z-index: -1;
+}
+.about__info {
+  display: grid;
+  align-items: center;
+  gap: 2.5rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 7.5rem;
+}
+.about__info .about__desc-box {
+  display: grid;
+  align-content: start;
+  gap: 2.25rem;
+}
+.about__info .about__desc-box .about__desc {
+  font: 400 1.25rem/1.5 "Comfortaa", cursive;
+  color: #f3f4f6;
+}
+.about__info .about__desc-box .about__list {
+  display: grid;
+  gap: 1rem;
+}
+.about__info .about__desc-box .about__list .about__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.about__info .about__desc-box .about__list .about__item .about__name {
+  font: 700 0.875rem/1.43 "Comfortaa", cursive;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  color: #6c63ff;
+}
+.about__info .about__desc-box .about__list .about__item .about__res {
+  color: #f5f5f5;
+}
+.about__studies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+.about__studies .about__formation {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  position: relative;
+}
+.about__studies .about__formation .about__subtitle {
+  display: flex;
+  gap: 0.625rem;
+  font: 700 1.125rem/1.33 "Comfortaa", cursive;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  margin-bottom: 1.5rem;
+}
+.about__studies .about__formation .about__studies-list {
+  display: grid;
+  gap: 0.375rem;
+}
+.about__studies .about__formation .about__studies-list .about__studies-item {
+  font: 700 1rem/1.5 "Comfortaa", cursive;
+  color: #e5e7eb;
+}
+.about__studies .about__formation .about__studies-list .about__studies-item:nth-child(2) {
+  display: grid;
+  gap: 0.25rem;
+  font: 700 0.875rem/1.43 "Comfortaa", cursive;
+  margin-bottom: 2.5rem;
+}
+.about__studies .about__formation .about__studies-list .about__studies-item:nth-child(2) span {
+  color: #9ca3af;
+}
+.about__studies .about__course .about__subtitle {
+  display: flex;
+  gap: 0.625rem;
+  font: 700 1.125rem/1.33 "Comfortaa", cursive;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  margin-bottom: 1.5rem;
+}
+.about__studies .about__course .about__course-1 .about__course {
+  display: inline-block;
+  font: 600 1.125rem/1.33 "Comfortaa", cursive;
+  color: #f5f5f5;
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+}
+.about__studies .about__course .about__course-1 .about__course-info {
+  max-width: 26.25rem;
+  background: #1f2937;
+  padding: 2rem 1.5rem;
+  border: 1px solid #4f46e5;
+  border-radius: 8px;
+  box-shadow: 0px 0px 2px rgba(165, 180, 252, 0.4);
+}
+.about__studies .about__course .about__course-1 .about__course-info--title {
+  display: flex;
+  gap: 0.5rem;
+  font: 700 1rem/1.5 "Comfortaa", cursive;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.about__studies .about__course .about__course-1 .about__course-info .bottom {
+  margin-bottom: 0.5rem;
+}
+.about__studies .about__course .about__course-1 .about__course-info .about__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding-left: 2.8125rem;
+  max-width: 27.5rem;
+}
+.about__studies .about__course .about__course-1 .about__course-info .about__tags span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #312e81;
+  border-radius: 4px;
+  color: #f9fafb;
+}
+.about__studies .about__course .about__course-1 .about__course-info .link__project:link,
+.about__studies .about__course .about__course-1 .about__course-info .link__project:visited {
+  display: block;
+  max-width: max-content;
+  margin-left: 1.875rem;
+  color: #a5b4fc;
+  margin-bottom: 2.25rem;
+  position: relative;
+  transition: 0.4s ease-in-out;
+}
+.about__studies .about__course .about__course-1 .about__course-info .link__project:link::after,
+.about__studies .about__course .about__course-1 .about__course-info .link__project:visited::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  position: absolute;
+}
+.about__studies .about__course .about__course-1 .about__course-info .link__project:link:hover,
+.about__studies .about__course .about__course-1 .about__course-info .link__project:visited:hover {
+  color: #4338ca;
+}
+
+.skills {
+  max-width: 77.5rem;
+  padding: 0 2.5rem;
+  margin: 0 auto;
+  display: grid;
 }
 
 /*# sourceMappingURL=style.css.map */
