@@ -26,6 +26,7 @@
 .btn--transparent:link,
 .btn--transparent:visited {
   transition: 0.4s ease-in-out;
+  text-transform: uppercase;
   &:hover,
   &:active {
     background: #4338ca;
