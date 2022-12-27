@@ -9,6 +9,11 @@
   border-radius: 4px;
   padding: rem(12) rem(24);
   color: #f9fafb;
+
+  @include screen-820 {
+    padding: rem(6) rem(12);
+    font-size: rem(14);
+  }
 }
 
 .btn--fill:link,
