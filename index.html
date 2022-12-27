@@ -8,11 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
-  <title>Vinícius - Desenvolvedor Front-End</title>
+  <title>Vinicius - Desenvolvedor Front-End</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+  <div id="vanta"></div>
+  <!-- HEADER -->
   <header class="header">
     <a href="#">
       <img src="./assets/img/logo-vinicius.png" alt="logo written Vinicius">
@@ -36,6 +38,7 @@
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero__content">
       <h1 class="hero__title">
@@ -47,39 +50,88 @@
         <a class="btn btn--fill" href="#projects">Projetos</a>
       </div>
     </div>
-    <img src="./assets/img/hero-img.svg" alt="">
+    <img class="hero__img" src="./assets/img/hero-img.svg" alt="">
   </section>
 
 
+  <!-- ABOUT -->
   <section class="about">
     <h2 class="about__title">sobre mim</h2>
     <div class="about__info">
-      <img src="./assets/img/sobre-img.svg" alt="">
+      <div class="about__img-box">
+        <img src="./assets/img/sobre-img.svg" alt="">
+        <!-- <div class="about__redes">
+          <img src="./assets/img/instagram-icon.svg" alt="">
+          <img src="./assets/img/linkedin-icon.svg" alt="">
+          <img src="./assets/img/git-icon.svg" alt="">
+        </div> -->
+      </div>
       <div class="about__desc-box">
         <p class="about__desc">Sou desenvolvedor Front End com habilidades em HTML, CSS e JavaScript, em meus projetos
           gosto de focar em acessibilidade, performace e resposividade.</p>
         <ul class="about__list">
           <li class="about__item">
-            <img src="./assets/img/cal.svg" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" class="cal" viewBox="0 0 512 512">
+              <title>Calendar</title>
+              <rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" x="48" y="80"
+                width="416" height="384" rx="48" />
+              <circle cx="296" cy="232" r="24" />
+              <circle cx="376" cy="232" r="24" />
+              <circle cx="296" cy="312" r="24" />
+              <circle cx="376" cy="312" r="24" />
+              <circle cx="136" cy="312" r="24" />
+              <circle cx="216" cy="312" r="24" />
+              <circle cx="136" cy="392" r="24" />
+              <circle cx="216" cy="392" r="24" />
+              <circle cx="296" cy="392" r="24" />
+              <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" stroke-linecap="round"
+                d="M128 48v32M384 48v32" />
+              <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M464 160H48" />
+            </svg>
             <p class="about__name">Idade:</p>
             <p class="about__res">26</p>
           </li>
           <li class="about__item">
-            <img src="./assets/img/city.svg" alt="">
-
+            <svg xmlns="http://www.w3.org/2000/svg" class="cal" viewBox="0 0 512 512">
+              <title>Location</title>
+              <path
+                d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z"
+                fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+              <circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="32" />
+            </svg>
             <p class="about__name">Cidade:</p>
             <p class="about__res">Belo Horizonte-MG</p>
 
           </li>
           <li class="about__item">
-            <img src="./assets/img/city.svg" alt="">
+            <svg class="cal" viewBox="0 0 512 512">
+              <title>Globe</title>
+              <path d="M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208 208-93.13 208-208S370.87 48 256 48z"
+                fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+              <path
+                d="M256 48c-58.07 0-112.67 93.13-112.67 208S197.93 464 256 464s112.67-93.13 112.67-208S314.07 48 256 48z"
+                fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+              <path
+                d="M117.33 117.33c38.24 27.15 86.38 43.34 138.67 43.34s100.43-16.19 138.67-43.34M394.67 394.67c-38.24-27.15-86.38-43.34-138.67-43.34s-100.43 16.19-138.67 43.34"
+                fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+              <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"
+                d="M256 48v416M464 256H48" />
+            </svg>
 
             <p class="about__name">Nacionalidade:</p>
             <p class="about__res">Brasileiro</p>
 
           </li>
           <li class="about__item">
-            <img src="./assets/img/at-sign.svg" alt="">
+            <svg class="cal" viewBox="0 0 512 512">
+              <title>At</title>
+              <path d="M320 254.27c-4.5 51-40.12 80-80.55 80s-67.34-35.82-63.45-80 37.12-80 77.55-80 70.33 36 66.45 80z"
+                fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+              <path
+                d="M319.77 415.77c-28.56 12-47.28 14.5-79.28 14.5-97.2 0-169-78.8-160.49-176s94.31-176 191.51-176C381 78.27 441.19 150 432.73 246c-6.31 71.67-52.11 92.32-76.09 88.07-22.56-4-41.18-24.42-37.74-63.5l8.48-96.25"
+                fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+            </svg>
 
             <p class="about__name">Email:</p>
             <p class="about__res">vinicius_henrique96@hotmail.com</p>
@@ -91,7 +143,13 @@
     <div class="about__studies">
       <div class="about__formation">
         <h3 class="about__subtitle">
-          <img src="./assets/img/book.svg" alt="">
+          <svg class="cal" viewBox="0 0 512 512">
+            <title>School</title>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+              d="M32 192L256 64l224 128-224 128L32 192z" />
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+              d="M112 240v128l144 80 144-80V240M480 368V192M256 320v128" />
+          </svg>
           Formação:
         </h3>
         <ul class="about__studies-list">
@@ -106,15 +164,30 @@
 
       <div class="about__course">
         <h3 class="about__subtitle">
-          <img src="./assets/img/book.svg" alt="">
+          <svg class="cal" viewBox="0 0 512 512">
+            <title>Medal</title>
+            <circle cx="256" cy="352" r="112" fill="none" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="32" />
+            <circle cx="256" cy="352" r="48" fill="none" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="32" />
+            <path
+              d="M147 323L41.84 159.32a32 32 0 01-1.7-31.61l31-62A32 32 0 0199.78 48h312.44a32 32 0 0128.62 17.69l31 62a32 32 0 01-1.7 31.61L365 323M371 144H37M428.74 52.6L305 250M140.55 144L207 250"
+              fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+          </svg>
           Cursos intensivos:
         </h3>
 
         <div class="about__course-1">
-          <h2 class="about__course">HTML e CSS para iniciantes</h2>
-          <div class="about__course-info">
+          <button class="about__course-name">HTML e CSS para iniciantes</button>
+          <div class="about__course-info active">
             <h4 class="about__course-info--title">
-              <img src="./assets/img/star.svg" alt="">
+              <svg class="cal" viewBox="0 0 512 512">
+                <title>Trophy</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M176 464h160M256 464V336M384 224c0-50.64-.08-134.63-.12-160a16 16 0 00-16-16l-223.79.26a16 16 0 00-16 15.95c0 30.58-.13 129.17-.13 159.79 0 64.28 83 112 128 112S384 288.28 384 224z" />
+                <path d="M128 96H48v16c0 55.22 33.55 112 80 112M384 96h80v16c0 55.22-33.55 112-80 112" fill="none"
+                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+              </svg>
               Algumas coisas que eu aprendi:
             </h4>
             <div class="about__tags">
@@ -128,87 +201,256 @@
               <span>flexbox</span>
             </div>
             <h4 class="about__course-info--title bottom">
-              <img src="./assets/img/trophy.svg" alt="">
+              <svg class="cal" viewBox="0 0 512 512">
+                <title>Star</title>
+                <path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none"
+                  stroke="currentColor" stroke-linejoin="round" stroke-width="32" />
+              </svg>
               projeto final que desenvolvi no curso:
             </h4>
-            <a class="link__project" target="_blank" href="https://bikcraft.net">https://bikcraft.net</a>
-            <a class="btn btn--fill" href="">Certificado</a>
+            <a class="link__project" target="_blank" href="https://vinicius-bikcraft.netlify.app">Acessar</a>
+            <a class="btn btn--fill" download="certificado" href="assets/certificados/doc.pdf">Certificado</a>
+          </div>
+        </div>
+
+        <div class="about__course-1">
+          <button class="about__course-name">Build Responsive Real-World Websites with HTML and CSS</button>
+          <div class="about__course-info">
+            <h4 class="about__course-info--title">
+              <svg class="cal" viewBox="0 0 512 512">
+                <title>Trophy</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M176 464h160M256 464V336M384 224c0-50.64-.08-134.63-.12-160a16 16 0 00-16-16l-223.79.26a16 16 0 00-16 15.95c0 30.58-.13 129.17-.13 159.79 0 64.28 83 112 128 112S384 288.28 384 224z" />
+                <path d="M128 96H48v16c0 55.22 33.55 112 80 112M384 96h80v16c0 55.22-33.55 112-80 112" fill="none"
+                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+              </svg>
+              Algumas coisas que eu aprendi:
+            </h4>
+            <div class="about__tags">
+              <span>web design</span>
+              <span>css</span>
+              <span>responsividade</span>
+              <span>box model</span>
+              <span>floats</span>
+              <span>layout patterns</span>
+            </div>
+            <h4 class="about__course-info--title bottom">
+              <svg class="cal" viewBox="0 0 512 512">
+                <title>Star</title>
+                <path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none"
+                  stroke="currentColor" stroke-linejoin="round" stroke-width="32" />
+              </svg>
+              projeto final que desenvolvi no curso:
+            </h4>
+            <a class="link__project" target="_blank" href="https://omnifood-vinicius.netlify.app">Acessar</a>
+            <a class="btn btn--fill" download="certificado"
+              href="assets/certificados/UC-ee5a7a7d-a7b0-4700-a3c8-1c6842ea4a89.pdf">Certificado</a>
+          </div>
+        </div>
+
+        <div class="about__course-1">
+          <button class="about__course-name">SASS e SCSS do básico ao avançado + Projetos
+          </button>
+          <div class="about__course-info">
+            <h4 class="about__course-info--title">
+              <svg class="cal" viewBox="0 0 512 512">
+                <title>Trophy</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M176 464h160M256 464V336M384 224c0-50.64-.08-134.63-.12-160a16 16 0 00-16-16l-223.79.26a16 16 0 00-16 15.95c0 30.58-.13 129.17-.13 159.79 0 64.28 83 112 128 112S384 288.28 384 224z" />
+                <path d="M128 96H48v16c0 55.22 33.55 112 80 112M384 96h80v16c0 55.22-33.55 112-80 112" fill="none"
+                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+              </svg>
+              Algumas coisas que eu aprendi:
+            </h4>
+            <div class="about__tags">
+              <span>nesting</span>
+              <span>variáveis</span>
+              <span>interpolação</span>
+              <span>mixins</span>
+              <span>funções</span>
+              <span>módulos</span>
+              <span>base</span>
+            </div>
+            <h4 class="about__course-info--title bottom">
+              <svg class="cal" viewBox="0 0 512 512">
+                <title>Star</title>
+                <path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none"
+                  stroke="currentColor" stroke-linejoin="round" stroke-width="32" />
+              </svg>
+              projeto final que desenvolvi no curso:
+            </h4>
+            <a class="link__project" target="_blank"
+              href="https://viniciusshenri96.github.io/project-electrum/">Acessar</a>
+            <a class="btn btn--fill" download="certificado"
+              href="assets/certificados/UC-4192d200-636f-460f-8458-099bfa3e9495.pdf">Certificado</a>
+          </div>
+        </div>
+
+        <div class="about__course-1">
+          <button class="about__course-name">The Complete JavaScript Course 2022: From Zero to Expert!
+          </button>
+          <div class="about__course-info">
+            <h4 class="about__course-info--title">
+              <svg class="cal" viewBox="0 0 512 512">
+                <title>Trophy</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M176 464h160M256 464V336M384 224c0-50.64-.08-134.63-.12-160a16 16 0 00-16-16l-223.79.26a16 16 0 00-16 15.95c0 30.58-.13 129.17-.13 159.79 0 64.28 83 112 128 112S384 288.28 384 224z" />
+                <path d="M128 96H48v16c0 55.22 33.55 112 80 112M384 96h80v16c0 55.22-33.55 112-80 112" fill="none"
+                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+              </svg>
+              Algumas coisas que eu aprendi:
+            </h4>
+            <div class="about__tags">
+              <span>DOM</span>
+              <span>OOP</span>
+              <span>Arrays</span>
+              <span>assíncrona</span>
+              <span>MVC</span>
+              <span>API</span>
+              <span>Spred</span>
+              <span>Destructuring</span>
+              <span>Funções</span>
+              <span>Exporting/Importing</span>
+              <span>Modulos</span>
+            </div>
+            <h4 class="about__course-info--title bottom">
+              <svg class="cal" viewBox="0 0 512 512">
+                <title>Star</title>
+                <path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none"
+                  stroke="currentColor" stroke-linejoin="round" stroke-width="32" />
+              </svg>
+              projeto final que desenvolvi no curso:
+            </h4>
+            <a class="link__project" target="_blank" href="https://vinicius-mapty.netlify.app">Acessar</a>
+            <a class="btn btn--fill" download="#" href="#">Certificado</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section class="skills">
     <h2 class="about__title">skills</h2>
 
     <div class="skills__techs">
       <div class="skills__list">
         <div class="skills__items">
-          <img class="skills__icon" src="./assets/img/html.svg" alt="">
+          <img class="skills__icon" src="./assets/img/skills-icon/html5.svg" alt="">
           <h3 class="skills__title">HTML</h3>
           <p class="skills__desc">Linguagem de Marcação</p>
         </div>
         <div class="circle">
-          <img src="./assets/img/plus.svg" alt="">
+          <svg aria-hidden="true" viewBox="0 0 512 512">
+            <title>Add</title>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+              d="M256 112v288M400 256H112" />
+          </svg>
         </div>
       </div>
       <div class="skills__list">
         <div class="skills__items">
-          <img class="skills__icon" src="./assets/img/css.svg" alt="">
+          <img class="skills__icon" src="./assets/img/skills-icon/css3.svg" alt="">
           <h3 class="skills__title">CSS</h3>
           <p class="skills__desc">Folhas de Estilo em Cascata</p>
         </div>
         <div class="circle">
-          <img src="./assets/img/plus.svg" alt="">
+          <svg aria-hidden="true" viewBox="0 0 512 512">
+            <title>Add</title>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+              d="M256 112v288M400 256H112" />
+          </svg>
         </div>
       </div>
       <div class="skills__list">
         <div class="skills__items">
-          <img class="skills__icon" src="./assets/img/js.svg" alt="">
+          <img class="skills__icon" src="./assets/img/skills-icon/javascript.svg" alt="">
           <h3 class="skills__title">JAVASCRIPT</h3>
           <p class="skills__desc">Linguagem de Programação</p>
         </div>
         <div class="circle">
-          <img src="./assets/img/plus.svg" alt="">
+          <svg aria-hidden="true" viewBox="0 0 512 512">
+            <title>Add</title>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+              d="M256 112v288M400 256H112" />
+          </svg>
         </div>
       </div>
       <div class="skills__list">
         <div class="skills__items">
-          <img class="skills__icon" src="./assets/img/git.svg" alt="">
+          <img class="skills__icon" src="./assets/img/skills-icon/git.svg" alt="">
           <h3 class="skills__title">GIT</h3>
           <p class="skills__desc">Sistema de controle de versões</p>
         </div>
         <div class="circle">
-          <img src="./assets/img/plus.svg" alt="">
+          <svg aria-hidden="true" viewBox="0 0 512 512">
+            <title>Add</title>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+              d="M256 112v288M400 256H112" />
+          </svg>
         </div>
       </div>
       <div class="skills__list">
         <div class="skills__items">
-          <img class="skills__icon" src="./assets/img/sass.svg" alt="">
+          <img class="skills__icon" src="./assets/img/skills-icon/sass.svg" alt="">
           <h3 class="skills__title">SASS</h3>
           <p class="skills__desc">Pré-processador CSS</p>
         </div>
         <div class="circle">
-          <img src="./assets/img/plus.svg" alt="">
+          <svg aria-hidden="true" viewBox="0 0 512 512">
+            <title>Add</title>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+              d="M256 112v288M400 256H112" />
+          </svg>
         </div>
       </div>
       <div class="skills__list">
         <div class="skills__items">
-          <img class="skills__icon" src="./assets/img/react.svg" alt="">
+          <img class="skills__icon" src="./assets/img/skills-icon/react.svg" alt="">
           <h3 class="skills__title">REACT JS</h3>
           <p class="skills__desc">Framework Js</p>
         </div>
         <div class="circle">
-          <img src="./assets/img/plus.svg" alt="">
+          <svg aria-hidden="true" viewBox="0 0 512 512">
+            <title>Add</title>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+              d="M256 112v288M400 256H112" />
+          </svg>
+        </div>
+      </div>
+      <div class="skills__list">
+        <div class="skills__items">
+          <img class="skills__icon" src="./assets/img/skills-icon/tailwind-css.svg" alt="">
+          <h3 class="skills__title">Tailwind css</h3>
+          <p class="skills__desc">Framework CSS</p>
+        </div>
+        <div class="circle">
+          <svg aria-hidden="true" viewBox="0 0 512 512">
+            <title>Add</title>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+              d="M256 112v288M400 256H112" />
+          </svg>
+        </div>
+      </div>
+      <div class="skills__list">
+        <div class="skills__items">
+          <img class="skills__icon" src="./assets/img/skills-icon/typescript.svg" alt="">
+          <h3 class="skills__title">Typescript</h3>
+          <p class="skills__desc">Linguagem de programação</p>
+        </div>
+        <div class="circle">
+          <svg aria-hidden="true" viewBox="0 0 512 512">
+            <title>Add</title>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+              d="M256 112v288M400 256H112" />
+          </svg>
         </div>
       </div>
 
     </div>
-
-
   </section>
 
+  <!-- PROJECTS -->
   <section class="projects" id="#projects">
     <h2 class="about__title">projetos</h2>
 
@@ -228,26 +470,45 @@
               href="https://omnifood-vinicius.netlify.app">https://omnifood-vinicius.netlify.app</a>
           </div>
         </div>
-        <img class="projects__img" src="./assets/img/projects-img/omnifood.png" alt="">
+        <img class="projects__img" src="./assets/img/projects-img/omnifood.jpg" alt="">
       </div>
-      <img src="./assets/img/details-projects.svg" alt="">
+      <img src="./assets/img/projects-img/details-projects.svg" alt="">
       <div class="projects__info">
         <div class="projects__content">
           <h2 class="projects__title">Omnifood</h2>
           <p class="projects__desc">Tecnologias do projetos</p>
           <ul class="projects__list">
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>HTML</span>
             </li>
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>CSS</span>
             </li>
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>JavaScript</span>
             </li>
+
 
           </ul>
           <div class="btn__box">
@@ -277,24 +538,43 @@
         </div>
         <img class="projects__img" src="./assets/img/projects-img/creative-agency.jpg" alt="">
       </div>
-      <img src="./assets/img/details-projects.svg" alt="">
+      <img src="./assets/img/projects-img/details-projects.svg" alt="">
       <div class="projects__info">
         <div class="projects__content">
           <h2 class="projects__title">Creative agency</h2>
           <p class="projects__desc">Tecnologias do projetos</p>
           <ul class="projects__list">
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>HTML</span>
             </li>
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>CSS</span>
             </li>
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>JavaScript</span>
             </li>
+
 
           </ul>
           <div class="btn__box">
@@ -325,24 +605,43 @@
         </div>
         <img class="projects__img" src="./assets/img/projects-img/bankist.jpg" alt="">
       </div>
-      <img src="./assets/img/details-projects.svg" alt="">
+      <img src="./assets/img/projects-img/details-projects.svg" alt="">
       <div class="projects__info">
         <div class="projects__content">
           <h2 class="projects__title">Bankist app</h2>
           <p class="projects__desc">Tecnologias do projetos</p>
           <ul class="projects__list">
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>HTML</span>
             </li>
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>CSS</span>
             </li>
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>JavaScript</span>
             </li>
+
 
           </ul>
           <div class="btn__box">
@@ -371,24 +670,43 @@
         </div>
         <img class="projects__img" src="./assets/img/projects-img/art-gallery.jpg" alt="">
       </div>
-      <img src="./assets/img/details-projects.svg" alt="">
+      <img src="./assets/img/projects-img/details-projects.svg" alt="">
       <div class="projects__info">
         <div class="projects__content">
           <h2 class="projects__title">Art Gallery</h2>
           <p class="projects__desc">Tecnologias do projetos</p>
           <ul class="projects__list">
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>HTML</span>
             </li>
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>CSS</span>
             </li>
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>JavaScript</span>
             </li>
+
 
           </ul>
           <div class="btn__box">
@@ -420,24 +738,43 @@
         </div>
         <img class="projects__img" src="./assets/img/projects-img/pig-game.jpg" alt="">
       </div>
-      <img src="./assets/img/details-projects.svg" alt="">
+      <img src="./assets/img/projects-img/details-projects.svg" alt="">
       <div class="projects__info">
         <div class="projects__content">
           <h2 class="projects__title">Pig Game</h2>
           <p class="projects__desc">Tecnologias do projetos</p>
           <ul class="projects__list">
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>HTML</span>
             </li>
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>CSS</span>
             </li>
             <li class="projects__item">
-              <img src="./assets/img/check.svg" alt="">
+              <svg class="check" viewBox="0 0 512 512">
+                <title>Checkbox</title>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                  d="M352 176L217.6 336 160 272" />
+                <rect x="64" y="64" width="384" height="384" rx="48" ry="48" fill="none" stroke="currentColor"
+                  stroke-linejoin="round" stroke-width="32" />
+              </svg>
               <span>JavaScript</span>
             </li>
+
 
           </ul>
           <div class="btn__box">
@@ -454,6 +791,7 @@
       Projetos +</a>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer-bg">
     <div class="footer">
       <div class="footer__info">
@@ -537,6 +875,11 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script> -->
+  <script src="assets/js/app.js"></script>
+
 </body>
 
 </html>

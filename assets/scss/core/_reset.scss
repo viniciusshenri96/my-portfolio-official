@@ -12,11 +12,11 @@
 
 /* better for people who browse with the keyboard and know where they are on the site, so I set a different style, making it more visible, taking it from the default.
  */
-*:focus,
-*:focus-visible {
-  outline: #646464 dotted 4px;
-  outline-offset: 4px;
-}
+// *:focus,
+// *:focus-visible {
+//   outline: #646464 dotted 4px;
+//   outline-offset: 4px;
+// }
 
 ul {
   list-style: none;
@@ -27,6 +27,7 @@ a:link {
 }
 
 img {
+  max-width: 100%;
   display: block;
 }
 
@@ -70,3 +71,12 @@ body {
   position: relative;
   background-color: #111827;
 }
+
+// #vanta {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: -1;
+// }
