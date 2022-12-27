@@ -23,14 +23,14 @@
   }
 }
 
-@mixin screen-500 {
-  @media (max-width: rem(500)) {
+@mixin screen-700 {
+  @media (max-width: rem(700)) {
     @content;
   }
 }
 
-@mixin screen-700 {
-  @media (max-width: rem(700)) {
+@mixin screen-500 {
+  @media (max-width: rem(500)) {
     @content;
   }
 }

@@ -155,6 +155,10 @@
   display: grid;
   margin-bottom: rem(160);
 
+  @include screen-500 {
+    margin-bottom: rem(60);
+  }
+
   &__title {
     font: 700 rem(64) / #{1.12} "Comfortaa", cursive;
     color: #f5f5f5;
@@ -165,6 +169,10 @@
     @include screen-1030 {
       font-size: rem(44);
       margin-bottom: rem(40);
+    }
+
+    @include screen-500 {
+      margin-bottom: rem(60);
     }
 
     &::before {
@@ -183,11 +191,14 @@
     margin-bottom: rem(120);
 
     @include screen-820 {
-      grid-template-columns: 1fr;
-
+      grid-template-columns: auto;
+      gap: 0;
       img {
         display: none;
       }
+    }
+    @include screen-500 {
+      margin-bottom: rem(60);
     }
 
     .about__desc-box {
@@ -220,16 +231,16 @@
         .about__item {
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
           gap: rem(8);
-
-          @include screen-820 {
-            width: max-content;
-          }
 
           .cal {
             width: rem(24);
             color: #a5b4fc;
             fill: #a5b4fc;
+            @include screen-500 {
+              width: rem(18);
+            }
           }
 
           .about__name {
@@ -241,10 +252,22 @@
             @include screen-1030 {
               font-size: rem(12);
             }
+            @include screen-500 {
+              font-size: rem(10);
+            }
+            @include screen-320 {
+              font-size: rem(8);
+            }
           }
           .about__res {
             color: #f5f5f5;
             // text-transform: uppercase;
+            @include screen-500 {
+              font-size: rem(10);
+            }
+            @include screen-320 {
+              font-size: rem(8);
+            }
           }
         }
       }
@@ -407,6 +430,10 @@
               font-size: rem(14);
             }
 
+            @include screen-500 {
+              padding-left: 0;
+            }
+
             .cal {
               width: rem(24);
               color: #a5b4fc;
@@ -432,6 +459,10 @@
 
             @include screen-820 {
               padding-left: rem(16);
+            }
+
+            @include screen-500 {
+              padding-left: 0;
             }
 
             span {
@@ -461,6 +492,9 @@
             @include screen-820 {
               margin-left: rem(15);
             }
+            @include screen-500 {
+              margin-left: 0;
+            }
 
             &::after {
               content: "";
@@ -486,10 +520,18 @@
   display: grid;
   margin-bottom: rem(160);
 
+  @include screen-820 {
+    margin-bottom: rem(60);
+  }
+
   &__techs {
     display: flex;
     flex-wrap: wrap;
     gap: rem(40);
+
+    @include screen-700 {
+      justify-content: center;
+    }
 
     .skills__list {
       width: rem(260);
@@ -550,10 +592,25 @@
   margin-bottom: rem(160);
   justify-items: start;
 
+  @include screen-1030 {
+    justify-items: center;
+  }
+
+  @include screen-820 {
+    margin-bottom: rem(60);
+  }
   .projects__box {
     display: flex;
     // gap: rem(48);
     margin-bottom: rem(80);
+
+    @include screen-1030 {
+      flex-direction: column;
+
+      & > img {
+        display: none;
+      }
+    }
 
     .projects__display {
       max-width: rem(600);
@@ -573,16 +630,30 @@
         margin: rem(20);
         display: flex;
 
+        @include screen-500 {
+          margin-left: rem(10);
+          margin-right: rem(10);
+        }
+
         .projects__icons {
           display: flex;
           gap: rem(8);
           margin-right: rem(16);
 
+          @include screen-500 {
+            margin-right: rem(6);
+          }
+
           .projects__arrows {
             display: flex;
             gap: rem(4);
+
+            @include screen-500 {
+              gap: rem(2);
+            }
+
             img {
-              width: 16px;
+              width: 14px;
             }
           }
           img {
@@ -590,7 +661,7 @@
           }
         }
         .projects__url {
-          width: rem(400);
+          width: 100%;
           height: rem(20);
           background: #4b5563;
           border-radius: rem(8);
@@ -599,10 +670,19 @@
           gap: rem(4);
           padding: rem(10);
 
+          @include screen-320 {
+            padding: rem(4);
+            max-width: max-content;
+          }
+
           .projects__link {
             display: inline-block;
             font: 700 rem(10) / #{1.43} "Comfortaa", cursive;
             color: #f5f5f5;
+
+            @include screen-500 {
+              font-size: rem(8);
+            }
           }
         }
       }
@@ -610,6 +690,11 @@
         grid-area: 1 / -1;
         height: rem(375);
         align-self: end;
+
+        @include screen-500 {
+          object-fit: cover;
+          object-position: center;
+        }
       }
     }
     .projects__info {
@@ -621,6 +706,18 @@
       padding: rem(32) rem(20);
       position: relative;
 
+      @include screen-1030 {
+        width: 100%;
+        border-radius: 0;
+
+        .projects__content {
+          text-align: center;
+        }
+      }
+      @include screen-700 {
+        padding: rem(16) rem(10);
+      }
+
       &::after {
         content: "";
         width: 18px;
@@ -630,6 +727,10 @@
         top: 50%;
         right: 0;
         transform: translate(50%, -50%);
+
+        @include screen-500 {
+          display: none;
+        }
       }
 
       .projects__title {
@@ -648,6 +749,16 @@
         gap: rem(10);
         color: #f5f5f5;
         margin-bottom: rem(80);
+
+        @include screen-1030 {
+          display: flex;
+          justify-content: center;
+        }
+
+        @include screen-500 {
+          display: flex;
+          margin-bottom: rem(40);
+        }
 
         .projects__item {
           display: flex;
@@ -673,6 +784,11 @@
     justify-content: start;
     gap: rem(20);
 
+    @include screen-1030 {
+      display: flex;
+      justify-content: center;
+    }
+
     .btn--transparent {
       justify-self: stretch;
     }
@@ -687,6 +803,10 @@
   padding: rem(80) rem(140);
   position: relative;
 
+  @include screen-1030 {
+    padding: rem(40) rem(16);
+  }
+
   &::before {
     content: "";
     display: block;
@@ -698,6 +818,10 @@
     left: 50px;
 
     // transform: translateY(50%);
+
+    @include screen-1030 {
+      display: none;
+    }
   }
 
   .footer {
@@ -705,6 +829,11 @@
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     // @include container;
+
+    @include screen-820 {
+      grid-template-columns: 1fr;
+      gap: rem(40);
+    }
 
     .footer__title {
       font: 700 rem(20) / #{22px} "Comfortaa";
@@ -740,6 +869,9 @@
       color: #9ca3af;
     }
     .footer__frontend {
+      @include screen-1030 {
+        grid-row: 1;
+      }
       .footer__desc {
         font: 400 rem(16) / #{1.5} "Comfortaa";
         color: #f5f5f5;
