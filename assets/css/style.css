@@ -65,6 +65,11 @@ body {
   padding: 0.75rem 1.5rem;
   color: #f9fafb;
 }
+.btn:link:hover,
+.btn:visited:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
 @media (max-width: 51.25rem) {
   .btn:link,
 .btn:visited {
@@ -374,6 +379,119 @@ body {
     margin-bottom: 3.75rem;
   }
 }
+.about__info .about__img-box {
+  position: relative;
+}
+.about__info .about__img-box .about__redes {
+  display: grid;
+  gap: 1.25rem;
+  position: absolute;
+  top: 0;
+}
+.about__info .about__img-box .about__redes a:link,
+.about__info .about__img-box .about__redes a:visited {
+  transition: 0.4s ease-in-out;
+}
+.about__info .about__img-box .about__redes a:link:hover:hover, .about__info .about__img-box .about__redes a:link:active:hover,
+.about__info .about__img-box .about__redes a:visited:hover:hover,
+.about__info .about__img-box .about__redes a:visited:active:hover {
+  transform: translateY(-4px);
+}
+.about__info .about__img-box .about__redes .about-icon {
+  width: 2rem;
+  fill: #a5b4fc;
+}
+.about__info .about__img-box .about__redes .mentor path {
+  fill: #a5b4fc;
+}
+.about__info .about__img-box .about__clock {
+  width: 6.25rem;
+  height: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/about-icon/clock.png);
+  background-size: cover;
+  border: 4px solid #1b2021;
+  border-radius: 50%;
+  box-shadow: -4px -4px 6px rgba(60, 60, 60, 0.5), inset 4px 4px 6px rgba(0, 0, 0, 0.5), inset -4px -4px 6px rgba(60, 60, 60, 0.3), 4px 4px 6px rgba(10, 10, 10, 0.3);
+  position: absolute;
+  top: 0;
+  right: 60px;
+}
+.about__info .about__img-box .about__clock::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: 15;
+}
+.about__info .about__img-box .about__clock .hour,
+.about__info .about__img-box .about__clock .minute,
+.about__info .about__img-box .about__clock .second {
+  position: absolute;
+}
+.about__info .about__img-box .about__clock .hour {
+  width: 40px;
+  height: 40px;
+}
+.about__info .about__img-box .about__clock .hour .hr {
+  width: 40px;
+  height: 40px;
+}
+.about__info .about__img-box .about__clock .minute {
+  width: 60px;
+  height: 60px;
+}
+.about__info .about__img-box .about__clock .minute .min {
+  width: 60px;
+  height: 60px;
+}
+.about__info .about__img-box .about__clock .second {
+  width: 60px;
+  height: 60px;
+}
+.about__info .about__img-box .about__clock .second .sec {
+  width: 60px;
+  height: 60px;
+}
+.about__info .about__img-box .about__clock .hr,
+.about__info .about__img-box .about__clock .min,
+.about__info .about__img-box .about__clock .sec {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+.about__info .about__img-box .about__clock .hr::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: #ff3d68;
+  z-index: 10;
+  border-radius: 10px;
+}
+.about__info .about__img-box .about__clock .min::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 30px;
+  background: #ffffff;
+  z-index: 11;
+  border-radius: 8px;
+}
+.about__info .about__img-box .about__clock .sec::before {
+  content: "";
+  position: absolute;
+  width: 0.5px;
+  height: 35px;
+  background: #39a2db;
+  z-index: 12;
+  border-radius: 2px;
+}
 .about__info .about__desc-box {
   display: grid;
   align-content: start;
@@ -519,34 +637,27 @@ body {
   border: none;
   background: none;
   display: inline-block;
-  font: 600 1.125rem/1.33 "Comfortaa", cursive;
+  font: 600 1rem/1.33 "Comfortaa", cursive;
   color: #f5f5f5;
   cursor: pointer;
   margin-bottom: 0.75rem;
   text-align: left;
   position: relative;
+  transition: 0.4s ease-in-out;
+}
+.about__studies .about__course .about__course-1 .about__course-name:hover {
+  color: #4338ca;
+}
+.about__studies .about__course .about__course-1 .about__course-name.active {
+  color: #4338ca;
+  height: 100%;
+  padding: 0.25rem;
 }
 @media (max-width: 64.375rem) {
   .about__studies .about__course .about__course-1 .about__course-name {
     font-size: 0.875rem;
     justify-self: start;
   }
-}
-.about__studies .about__course .about__course-1 .about__course-name::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background-color: #6366f1;
-  position: absolute;
-  bottom: -4px;
-  transition: 0.4s ease-in-out;
-}
-.about__studies .about__course .about__course-1 .about__course-name:hover, .about__studies .about__course .about__course-1 .about__course-name:active {
-  color: #6366f1;
-}
-.about__studies .about__course .about__course-1 .about__course-name:hover::after {
-  width: 100%;
 }
 .about__studies .about__course .about__course-1 .about__course-info {
   max-width: 26.25rem;

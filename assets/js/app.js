@@ -10,6 +10,7 @@ const projectBtn = document.querySelector(".btn--project");
 aboutCourse.addEventListener("click", function (e) {
   const clicked = e.target.closest(".about__course-name");
   if (!clicked) return;
+  clicked.classList.toggle("active");
   clicked.nextElementSibling.classList.toggle("active");
 });
 
@@ -42,4 +43,22 @@ document.querySelector(".header__list").addEventListener("click", function (e) {
     const sectionId = e.target.getAttribute("href");
     document.querySelector(sectionId).scrollIntoView({ behavior: "smooth" });
   }
+});
+
+// Clock
+const degre = 6;
+const hr = document.querySelector("#hr");
+const min = document.querySelector("#min");
+const sec = document.querySelector("#sec");
+
+setInterval(() => {
+  let date = new Date();
+  let hh = date.getHours() * 30;
+  let mm = date.getMinutes() * degre;
+  let ss = date.getSeconds() * degre;
+
+  // prettier-ignore
+  hr.style.transform = `rotateZ(${hh + (mm / 12)}deg)`;
+  min.style.transform = `rotateZ(${mm}deg)`;
+  sec.style.transform = `rotateZ(${ss}deg)`;
 });
