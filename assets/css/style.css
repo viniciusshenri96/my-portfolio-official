@@ -101,6 +101,15 @@ body {
   background: #4338ca;
 }
 
+section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 .header {
   max-width: 77.5rem;
   padding: 0 2.5rem;
@@ -388,6 +397,11 @@ body {
   position: absolute;
   top: 0;
 }
+@media (max-width: 51.25rem) {
+  .about__info .about__img-box .about__redes {
+    display: none;
+  }
+}
 .about__info .about__img-box .about__redes a:link,
 .about__info .about__img-box .about__redes a:visited {
   transition: 0.4s ease-in-out;
@@ -427,6 +441,16 @@ body {
   background: #ffffff;
   border-radius: 50%;
   z-index: 15;
+}
+@media (max-width: 64.375rem) {
+  .about__info .about__img-box .about__clock {
+    right: 10px;
+  }
+}
+@media (max-width: 51.25rem) {
+  .about__info .about__img-box .about__clock {
+    display: none;
+  }
 }
 .about__info .about__img-box .about__clock .hour,
 .about__info .about__img-box .about__clock .minute,
@@ -823,7 +847,8 @@ body {
   display: grid;
   align-content: start;
 }
-.skills__techs .skills__list .circle {
+.skills__techs .skills__list .circle:link,
+.skills__techs .skills__list .circle:visited {
   width: 48px;
   height: 48px;
   border-radius: 100%;
@@ -838,7 +863,13 @@ body {
   cursor: pointer;
   transition: 0.4s ease-in-out;
 }
-.skills__techs .skills__list .circle svg {
+.skills__techs .skills__list .circle:link:hover, .skills__techs .skills__list .circle:link:active,
+.skills__techs .skills__list .circle:visited:hover,
+.skills__techs .skills__list .circle:visited:active {
+  background: #4f46e5;
+}
+.skills__techs .skills__list .circle:link svg,
+.skills__techs .skills__list .circle:visited svg {
   width: 2rem;
   color: #f5f5f5;
 }
@@ -1138,6 +1169,13 @@ body {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 3.75rem;
+}
+.footer-bg .footer .footer__list .about-icon {
+  width: 2rem;
+  fill: #a5b4fc;
+}
+.footer-bg .footer .footer__list .mentor path {
+  fill: #a5b4fc;
 }
 .footer-bg .footer .footer__copy {
   font: 400 1rem/1.12 "Comfortaa";

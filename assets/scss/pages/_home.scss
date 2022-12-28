@@ -2,6 +2,15 @@
 @use "../abstracts/mixins" as *;
 @use "../components/circles" as *;
 
+section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 .header {
   @include container;
   padding-top: rem(36);
@@ -232,6 +241,10 @@
         position: absolute;
         top: 0;
 
+        @include screen-820 {
+          display: none;
+        }
+
         a:link,
         a:visited {
           transition: 0.4s ease-in-out;
@@ -279,6 +292,14 @@
           background: #ffffff;
           border-radius: 50%;
           z-index: 15;
+        }
+
+        @include screen-1030 {
+          right: 10px;
+        }
+
+        @include screen-820 {
+          display: none;
         }
 
         .hour,
@@ -711,7 +732,8 @@
       display: grid;
       align-content: start;
 
-      .circle {
+      .circle:link,
+      .circle:visited {
         width: 48px;
         height: 48px;
         border-radius: 100%;
@@ -725,6 +747,11 @@
         transform: translate(-50%, 50%);
         cursor: pointer;
         transition: 0.4s ease-in-out;
+
+        &:hover,
+        &:active {
+          background: #4f46e5;
+        }
 
         svg {
           width: rem(32);
@@ -1030,6 +1057,14 @@
       display: flex;
       gap: rem(24);
       margin-bottom: rem(60);
+
+      .about-icon {
+        width: rem(32);
+        fill: #a5b4fc;
+      }
+      .mentor path {
+        fill: #a5b4fc;
+      }
     }
 
     .footer__copy {
