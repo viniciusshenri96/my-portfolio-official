@@ -152,6 +152,28 @@ body {
 .header__nav .header__list .header__link:link,
 .header__nav .header__list .header__link:visited {
   color: #f9fafb;
+  transition: 0.4s ease-in-out;
+  position: relative;
+}
+.header__nav .header__list .header__link:link::after,
+.header__nav .header__list .header__link:visited::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #6366f1;
+  position: absolute;
+  bottom: -8px;
+  transition: 0.4s ease-in-out;
+}
+.header__nav .header__list .header__link:link:hover, .header__nav .header__list .header__link:link:active,
+.header__nav .header__list .header__link:visited:hover,
+.header__nav .header__list .header__link:visited:active {
+  color: #6366f1;
+}
+.header__nav .header__list .header__link:link:hover::after,
+.header__nav .header__list .header__link:visited:hover::after {
+  width: 100%;
 }
 @media (max-width: 51.25rem) {
   .header__nav {
@@ -502,12 +524,29 @@ body {
   cursor: pointer;
   margin-bottom: 0.75rem;
   text-align: left;
+  position: relative;
 }
 @media (max-width: 64.375rem) {
   .about__studies .about__course .about__course-1 .about__course-name {
     font-size: 0.875rem;
     justify-self: start;
   }
+}
+.about__studies .about__course .about__course-1 .about__course-name::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #6366f1;
+  position: absolute;
+  bottom: -4px;
+  transition: 0.4s ease-in-out;
+}
+.about__studies .about__course .about__course-1 .about__course-name:hover, .about__studies .about__course .about__course-1 .about__course-name:active {
+  color: #6366f1;
+}
+.about__studies .about__course .about__course-1 .about__course-name:hover::after {
+  width: 100%;
 }
 .about__studies .about__course .about__course-1 .about__course-info {
   max-width: 26.25rem;

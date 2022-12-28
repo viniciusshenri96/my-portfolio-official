@@ -52,6 +52,28 @@
       .header__link:link,
       .header__link:visited {
         color: #f9fafb;
+        transition: 0.4s ease-in-out;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          background-color: #6366f1;
+          position: absolute;
+          bottom: -8px;
+          transition: 0.4s ease-in-out;
+        }
+
+        &:hover,
+        &:active {
+          color: #6366f1;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
 
@@ -383,10 +405,30 @@
           cursor: pointer;
           margin-bottom: rem(12);
           text-align: left;
+          position: relative;
 
           @include screen-1030 {
             font-size: rem(14);
             justify-self: start;
+          }
+          &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: #6366f1;
+            position: absolute;
+            bottom: -4px;
+            transition: 0.4s ease-in-out;
+          }
+
+          &:hover,
+          &:active {
+            color: #6366f1;
+          }
+
+          &:hover::after {
+            width: 100%;
           }
         }
         .about__course-info {
@@ -714,6 +756,7 @@
           text-align: center;
         }
       }
+
       @include screen-700 {
         padding: rem(16) rem(10);
       }

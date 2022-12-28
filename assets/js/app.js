@@ -4,11 +4,12 @@ const aboutCourse = document.querySelector(".about__course");
 const menuBtn = document.querySelector(".menu");
 const closeBtn = document.querySelector(".close");
 const headerNav = document.querySelector(".header__nav");
+const projectsInfo = document.querySelectorAll(".projects__info");
+const projectBtn = document.querySelector(".btn--project");
 
 aboutCourse.addEventListener("click", function (e) {
   const clicked = e.target.closest(".about__course-name");
   if (!clicked) return;
-
   clicked.nextElementSibling.classList.toggle("active");
 });
 
@@ -27,15 +28,18 @@ const closeMenu = function () {
 menuBtn.addEventListener("click", openMenu);
 closeBtn.addEventListener("click", closeMenu);
 
-// VANTA.NET({
-//   el: "#vanta",
-//   mouseControls: false,
-//   touchControls: true,
-//   gyroControls: false,
-//   minHeight: 400.0,
-//   minWidth: 800.0,
-//   scale: 1.0,
-//   scaleMobile: 1.0,
-//   color: 0x8783f2,
-//   backgroundColor: 0x291059,
-// });
+//
+projectBtn.addEventListener("click", function (e) {
+  document
+    .getElementById("projetos")
+    .scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+// Implementing Page Navigation
+document.querySelector(".header__list").addEventListener("click", function (e) {
+  if (e.target.classList.contains("header__link")) {
+    e.preventDefault();
+    const sectionId = e.target.getAttribute("href");
+    document.querySelector(sectionId).scrollIntoView({ behavior: "smooth" });
+  }
+});
