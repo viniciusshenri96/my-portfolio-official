@@ -2,13 +2,28 @@
 @use "../abstracts/mixins" as *;
 @use "../components/circles" as *;
 
-section {
+.section {
   transition: transform 1s, opacity 1s;
 }
 
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100vh;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.5);
+  display: none;
+
+  @include screen-820 {
+    &.active {
+      display: block;
+    }
+  }
 }
 
 .header {
@@ -32,6 +47,7 @@ section {
       color: #f3f4f6;
       align-self: start;
       display: block;
+      z-index: 11;
 
       .menu {
         display: block;
@@ -83,6 +99,12 @@ section {
         &:hover::after {
           width: 100%;
         }
+
+        @include screen-820 {
+          &::after {
+            display: none;
+          }
+        }
       }
     }
 
@@ -93,11 +115,26 @@ section {
       text-align: center;
       background: #1f2937;
       padding: rem(20);
+      z-index: 10;
 
       display: none;
       position: absolute;
-      top: rem(100);
-      right: rem(20);
+      top: rem(70);
+      right: 0;
+      animation: animationT 1s forwards;
+
+      @keyframes animationT {
+        from {
+          opacity: 0;
+          transform: translateX(10px);
+          right: 0;
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+          right: rem(10);
+        }
+      }
 
       .header__list {
         display: grid;
@@ -251,9 +288,7 @@ section {
 
           &:hover,
           &:active {
-            &:hover {
-              transform: translateY(-4px);
-            }
+            transform: translateY(-4px);
           }
         }
 
@@ -1053,17 +1088,27 @@ section {
         }
       }
     }
+
     .footer__list {
       display: flex;
       gap: rem(24);
       margin-bottom: rem(60);
 
-      .about-icon {
-        width: rem(32);
-        fill: #a5b4fc;
-      }
-      .mentor path {
-        fill: #a5b4fc;
+      a:link,
+      a:visited {
+        transition: 0.4s ease-in-out;
+
+        &:hover {
+          transform: translateY(-4px);
+        }
+
+        .about-icon {
+          width: rem(32);
+          fill: #a5b4fc;
+        }
+        .mentor path {
+          fill: #a5b4fc;
+        }
       }
     }
 

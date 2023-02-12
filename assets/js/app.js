@@ -1,11 +1,16 @@
 "use script";
 
 const aboutCourse = document.querySelector(".about__course");
+const navButton = document.querySelector(".menu-mobile");
 const menuBtn = document.querySelector(".menu");
 const closeBtn = document.querySelector(".close");
 const headerNav = document.querySelector(".header__nav");
 const projectsInfo = document.querySelectorAll(".projects__info");
 const projectBtn = document.querySelector(".btn--project");
+const overlay = document.querySelector(".overlay");
+
+const eventAdd = "click";
+const classAct = "active";
 
 aboutCourse.addEventListener("click", function (e) {
   const clicked = e.target.closest(".about__course-name");
@@ -18,19 +23,49 @@ const openMenu = function () {
   headerNav.classList.add("active");
   closeBtn.classList.add("active");
   menuBtn.classList.add("active");
+  overlay.classList.add("active");
+  navButton.setAttribute("aria-expanded", "true");
+
+  outsideClick(headerNav, eventAdd, () => {
+    headerNav.classList.remove("active");
+    closeBtn.classList.remove("active");
+    menuBtn.classList.remove("active");
+    overlay.classList.remove("active");
+    navButton.setAttribute("aria-expanded", "false");
+  });
 };
 
 const closeMenu = function () {
   headerNav.classList.remove("active");
   closeBtn.classList.remove("active");
   menuBtn.classList.remove("active");
+  overlay.classList.remove("active");
+  navButton.setAttribute("aria-expanded", "false");
 };
 
 menuBtn.addEventListener("click", openMenu);
 closeBtn.addEventListener("click", closeMenu);
 
+function outsideClick(element, eventAdd, callback) {
+  const html = document.querySelector("html");
+  const outside = "data-outside";
+
+  if (!element.hasAttribute(outside)) {
+    setTimeout(() => html.addEventListener(eventAdd, handleOutsideClick));
+    element.setAttribute(outside, "");
+  }
+
+  function handleOutsideClick(event) {
+    if (!element.contains(event.target)) {
+      element.removeAttribute(outside);
+      html.removeEventListener(eventAdd, handleOutsideClick);
+      callback();
+    }
+  }
+}
+
 //
-projectBtn.addEventListener("click", function (e) {
+projectBtn.addEventListener("click", function () {
   document
     .getElementById("projetos")
     .scrollIntoView({ behavior: "smooth", block: "start" });
@@ -64,7 +99,7 @@ setInterval(() => {
 });
 
 // Revealing Elements on Scroll
-const allSections = document.querySelectorAll("section");
+const allSections = document.querySelectorAll(".section");
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;

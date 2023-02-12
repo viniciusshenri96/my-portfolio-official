@@ -101,13 +101,27 @@ body {
   background: #4338ca;
 }
 
-section {
+.section {
   transition: transform 1s, opacity 1s;
 }
 
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100vh;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.5);
+  display: none;
+}
+@media (max-width: 51.25rem) {
+  .overlay.active {
+    display: block;
+  }
 }
 
 .header {
@@ -139,6 +153,7 @@ section {
     color: #f3f4f6;
     align-self: start;
     display: block;
+    z-index: 11;
   }
   .header .menu-mobile .menu {
     display: block;
@@ -190,6 +205,12 @@ section {
   width: 100%;
 }
 @media (max-width: 51.25rem) {
+  .header__nav .header__list .header__link:link::after,
+.header__nav .header__list .header__link:visited::after {
+    display: none;
+  }
+}
+@media (max-width: 51.25rem) {
   .header__nav {
     display: grid;
     gap: 1.25rem;
@@ -197,10 +218,24 @@ section {
     text-align: center;
     background: #1f2937;
     padding: 1.25rem;
+    z-index: 10;
     display: none;
     position: absolute;
-    top: 6.25rem;
-    right: 1.25rem;
+    top: 4.375rem;
+    right: 0;
+    animation: animationT 1s forwards;
+  }
+  @keyframes animationT {
+    from {
+      opacity: 0;
+      transform: translateX(10px);
+      right: 0;
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+      right: 0.625rem;
+    }
   }
   .header__nav .header__list {
     display: grid;
@@ -406,9 +441,9 @@ section {
 .about__info .about__img-box .about__redes a:visited {
   transition: 0.4s ease-in-out;
 }
-.about__info .about__img-box .about__redes a:link:hover:hover, .about__info .about__img-box .about__redes a:link:active:hover,
-.about__info .about__img-box .about__redes a:visited:hover:hover,
-.about__info .about__img-box .about__redes a:visited:active:hover {
+.about__info .about__img-box .about__redes a:link:hover, .about__info .about__img-box .about__redes a:link:active,
+.about__info .about__img-box .about__redes a:visited:hover,
+.about__info .about__img-box .about__redes a:visited:active {
   transform: translateY(-4px);
 }
 .about__info .about__img-box .about__redes .about-icon {
@@ -1170,11 +1205,21 @@ section {
   gap: 1.5rem;
   margin-bottom: 3.75rem;
 }
-.footer-bg .footer .footer__list .about-icon {
+.footer-bg .footer .footer__list a:link,
+.footer-bg .footer .footer__list a:visited {
+  transition: 0.4s ease-in-out;
+}
+.footer-bg .footer .footer__list a:link:hover,
+.footer-bg .footer .footer__list a:visited:hover {
+  transform: translateY(-4px);
+}
+.footer-bg .footer .footer__list a:link .about-icon,
+.footer-bg .footer .footer__list a:visited .about-icon {
   width: 2rem;
   fill: #a5b4fc;
 }
-.footer-bg .footer .footer__list .mentor path {
+.footer-bg .footer .footer__list a:link .mentor path,
+.footer-bg .footer .footer__list a:visited .mentor path {
   fill: #a5b4fc;
 }
 .footer-bg .footer .footer__copy {
